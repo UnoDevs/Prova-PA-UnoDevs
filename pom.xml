@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.felipesantos</groupId>
-	<artifactId>projetosecurity</artifactId>
+	<artifactId>provapa</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>projetosecurity</name>
+	<name>provapa</name>
 	<description>Projeto Felipe dos Santos - 24224651-2</description>
 	<properties>
 		<java.version>21</java.version>
