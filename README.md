@@ -1,117 +1,63 @@
-# 🔐 Projeto Security com Spring Boot
 
-![Java](https://img.shields.io/badge/Java-21-blue?logo=java)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.5.0-brightgreen?logo=spring)
-![JWT](https://img.shields.io/badge/JWT-Auth0-yellow?logo=jsonwebtokens)
+# Prova‑PA‑UnoDevs
 
-> 🧑‍🎓 Trabalho universitário desenvolvido para a disciplina de **Programação para Web/Back-End**, com foco em **autenticação e autorização com Spring Security + JWT**.
+**Prova de Programação Avançada** — projeto da equipe UnoDevs.
 
----
+## 👥 Integrantes
 
-## 👨‍💻 Autor
+- Jonas Carvalho Brito RA: 23272171-2
 
-- **Nome:** Felipe dos Santos
-- **RA:** 24224651-2
-- **Curso:** Análise e Desenvolvimento de Sistemas
-- **Faculdade:** Unicesumar
+- Anderson Gomes Efrens RA: 23130585-2
 
----
+- Cáriton Vilasanti RA: 23094807-2
 
-## 🧠 Objetivo do Projeto
+- Filipe Ariel Fricati Filadoro RA: 23120339-2
 
-Este projeto tem como objetivo implementar um sistema seguro de autenticação e autorização baseado em **JWT (JSON Web Token)**, com suporte a perfis de acesso e controle baseado em roles (`ADMIN` e `USER`), usando as tecnologias:
+- Felipe Dos Santos Maniezo de Freitas RA: 24224651-2
 
-- Spring Boot 3.5.0
-- Spring Security
-- Java 21
-- MapStruct
-- H2 Database (banco em memória)
-- Auth0 Java JWT
+- João Pedro Lima Gomes RA:230109902
 
----
+## 🧰 Tecnologias e Ferramentas
 
-## ⚙️ Tecnologias e Dependências
+- **Java** (100%)
+- **Maven** (gerenciamento de dependências e build)
+- Scripts: `.mvn/wrapper`, `mvnw`, `mvnw.cmd`
 
-| Tecnologia        | Versão       |
-|-------------------|--------------|
-| Java              | 21           |
-| Spring Boot       | 3.5.0        |
-| Spring Security   | ✅           |
-| MapStruct         | 1.5.5.Final  |
-| H2 Database       | In-Memory    |
-| Java JWT (Auth0)  | 4.4.0        |
+## 🎯 Estrutura do Projeto
 
----
+```
+Prova‑PA‑UnoDevs/
+├─ .mvn/wrapper/         # arquivos do Maven Wrapper
+├─ src/                  # código‑fonte Java
+├─ pom.xml               # configuração do Maven
+├─ mvnw, mvnw.cmd        # executáveis para execução cross‑platform
+├─ .gitignore
+└─ .gitattributes
+```
 
-## 🚀 Como executar o projeto
+- O diretório `src/` contém sua lógica de aplicação (presumivelmente `src/main/java`).
+- O arquivo `pom.xml` define dependências e plugins.
+- Os wrappers permitem executar comandos Maven sem exigir Maven instalado.
 
-### Pré-requisitos:
-- Java 21 instalado
-- Maven 3.x
+## 🚀 Como usar
 
-### Passos para rodar:
+### Pré‑requisitos
+
+- JDK (Java Development Kit) 8 ou superior
+
+### Comandos úteis
+
+```bash
+# Rodar testes (se houver)
+./mvnw test
+
+# Gerar build JAR
+./mvnw package
+
+# Executar a aplicação
+./mvnw exec:java
+```
+
+Ajuste conforme os plugins configurados no `pom.xml`.
 
 
-# 1. Clone o repositório
-git clone https://github.com/seu-usuario/projetosecurity.git
-cd projetosecurity
-
-# 2. Compile o projeto
-mvn clean install
-
-# 3. Rode a aplicação
-mvn spring-boot:run
-
-## 📍 Acesso à Aplicação
-
-A aplicação estará disponível em:
-
-http://localhost:8080
-
----
-
-## 🛠️ Endpoints Principais
-
-### 🔐 Autenticação
-
-`POST /auth/login`
-
-> Envia `username` e `password`, e recebe um token JWT válido.
-
----
-
-### 👤 Usuário
-
-#### ➕ Criar Usuário
-
-`POST /user/create`  
-> Cria um novo usuário.
-
-#### 📄 Listar Usuários
-
-`GET /user`  
-> Lista todos os usuários.  
-> 🔐 Acesso apenas para `ADMIN`.
-
-#### 🔍 Buscar Usuário por ID
-
-`GET /user/{id}`  
-> Visualiza dados do próprio perfil ou de qualquer outro usuário (ADMIN).
-
-#### ✏️ Atualizar Usuário
-
-`PUT /user/{id}`  
-> Atualiza os dados do próprio perfil ou de qualquer outro (ADMIN).
-
----
-
-## ⚠️ Autorização JWT
-
-Todos os endpoints (exceto `/auth/login` e `/user/create`) exigem o token JWT no cabeçalho da requisição:
-
-## 🔐 Perfis de Acesso
-
-| Perfil | Acesso Permitido |
-|--------|------------------|
-| `ADMIN` | Pode acessar, editar e deletar **qualquer usuário** |
-| `USER`  | Pode acessar e editar **apenas o próprio perfil** |
