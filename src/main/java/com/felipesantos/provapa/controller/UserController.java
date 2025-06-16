@@ -1,8 +1,8 @@
-package com.felipesantos.projetosecurity.controller;
+package com.felipesantos.provapa.controller;
 
-import com.felipesantos.projetosecurity.dto.UserDTO;
-import com.felipesantos.projetosecurity.service.RegisterService;
-import com.felipesantos.projetosecurity.service.UserService;
+import com.felipesantos.provapa.dto.UserDTO;
+import com.felipesantos.provapa.service.RegisterService;
+import com.felipesantos.provapa.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

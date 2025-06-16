@@ -1,9 +1,9 @@
-package com.felipesantos.projetosecurity.service;
+package com.felipesantos.provapa.service;
 
-import com.felipesantos.projetosecurity.dto.UserDTO;
-import com.felipesantos.projetosecurity.model.Role;
-import com.felipesantos.projetosecurity.model.User;
-import com.felipesantos.projetosecurity.repository.UserRepository;
+import com.felipesantos.provapa.dto.UserDTO;
+import com.felipesantos.provapa.model.Role;
+import com.felipesantos.provapa.model.User;
+import com.felipesantos.provapa.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;

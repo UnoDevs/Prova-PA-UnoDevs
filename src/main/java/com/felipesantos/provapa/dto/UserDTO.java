@@ -1,7 +1,7 @@
-package com.felipesantos.projetosecurity.dto;
+package com.felipesantos.provapa.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.felipesantos.projetosecurity.model.Role;
+import com.felipesantos.provapa.model.Role;
 
 import java.io.Serializable;
 

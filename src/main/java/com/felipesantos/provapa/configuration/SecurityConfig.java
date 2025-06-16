@@ -1,7 +1,7 @@
-package com.felipesantos.projetosecurity.configuration;
+package com.felipesantos.provapa.configuration;
 
-import com.felipesantos.projetosecurity.security.jwt.JwtTokenFilter;
-import com.felipesantos.projetosecurity.security.jwt.JwtTokenProvider;
+import com.felipesantos.provapa.security.jwt.JwtTokenFilter;
+import com.felipesantos.provapa.security.jwt.JwtTokenProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

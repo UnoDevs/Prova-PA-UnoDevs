@@ -1,8 +1,8 @@
-package com.felipesantos.projetosecurity.controller;
+package com.felipesantos.provapa.controller;
 
-import com.felipesantos.projetosecurity.dto.AccountCredentialsDTO;
-import com.felipesantos.projetosecurity.dto.TokenDTO;
-import com.felipesantos.projetosecurity.service.AuthService;
+import com.felipesantos.provapa.dto.AccountCredentialsDTO;
+import com.felipesantos.provapa.dto.TokenDTO;
+import com.felipesantos.provapa.service.AuthService;
 import io.micrometer.common.util.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

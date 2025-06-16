@@ -1,4 +1,4 @@
-package com.felipesantos.projetosecurity.dto;
+package com.felipesantos.provapa.dto;
 
 import java.io.Serializable;
 

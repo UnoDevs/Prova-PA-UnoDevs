@@ -1,4 +1,4 @@
-package com.felipesantos.projetosecurity.model;
+package com.felipesantos.provapa.model;
 
 import jakarta.persistence.*;
 import org.springframework.security.core.GrantedAuthority;

@@ -1,11 +1,11 @@
-package com.felipesantos.projetosecurity.security.jwt;
+package com.felipesantos.provapa.security.jwt;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.auth0.jwt.interfaces.DecodedJWT;
-import com.felipesantos.projetosecurity.dto.TokenDTO;
+import com.felipesantos.provapa.dto.TokenDTO;
 import io.micrometer.common.util.StringUtils;
 import jakarta.annotation.PostConstruct;
 import jakarta.servlet.http.HttpServletRequest;
@@ -20,7 +20,6 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.util.Base64;
 import java.util.Date;
-import java.util.List;
 
 @Service
 public class JwtTokenProvider {

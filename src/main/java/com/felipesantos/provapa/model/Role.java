@@ -1,4 +1,4 @@
-package com.felipesantos.projetosecurity.model;
+package com.felipesantos.provapa.model;
 
 public enum Role {
     ADMIN("ROLE_ADMIN"),
