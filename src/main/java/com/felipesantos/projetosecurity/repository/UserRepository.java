@@ -1,6 +1,6 @@
-package com.felipesantos.provapa.repository;
+package com.felipesantos.projetosecurity.repository;
 
-import com.felipesantos.provapa.model.User;
+import com.felipesantos.projetosecurity.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

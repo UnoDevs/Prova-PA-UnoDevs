@@ -1,10 +1,10 @@
-package com.felipesantos.provapa.service;
+package com.felipesantos.projetosecurity.service;
 
-import com.felipesantos.provapa.dto.AccountCredentialsDTO;
-import com.felipesantos.provapa.dto.TokenDTO;
-import com.felipesantos.provapa.model.User;
-import com.felipesantos.provapa.repository.UserRepository;
-import com.felipesantos.provapa.security.jwt.JwtTokenProvider;
+import com.felipesantos.projetosecurity.dto.AccountCredentialsDTO;
+import com.felipesantos.projetosecurity.dto.TokenDTO;
+import com.felipesantos.projetosecurity.model.User;
+import com.felipesantos.projetosecurity.repository.UserRepository;
+import com.felipesantos.projetosecurity.security.jwt.JwtTokenProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -30,6 +30,6 @@ public class AuthService {
 
         User user = userRepository.findByUsername(dto.getUsername());
         if (user == null) throw new UsernameNotFoundException("Username " + dto.getUsername() + " not found");
-        return tokenProvider.createAccessToken(user.getUsername(),user.getPassword());
+        return tokenProvider.createAccessToken(user.getUsername(),user.getRole().getRole());
     }
 }

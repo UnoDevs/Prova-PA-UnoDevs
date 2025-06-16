@@ -1,4 +1,4 @@
-package com.felipesantos.provapa.security.jwt;
+package com.felipesantos.projetosecurity.security.jwt;
 
 import io.micrometer.common.util.StringUtils;
 import jakarta.servlet.FilterChain;

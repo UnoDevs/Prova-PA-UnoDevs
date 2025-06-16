@@ -1,13 +1,13 @@
-package com.felipesantos.provapa;
+package com.felipesantos.projetosecurity;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ProvaPAApplication {
+public class SecurityApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ProvaPAApplication.class, args);
+		SpringApplication.run(SecurityApplication.class, args);
 	}
 
 }

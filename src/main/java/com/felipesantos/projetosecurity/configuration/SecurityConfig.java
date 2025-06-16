@@ -1,7 +1,7 @@
-package com.felipesantos.provapa.configuration;
+package com.felipesantos.projetosecurity.configuration;
 
-import com.felipesantos.provapa.security.jwt.JwtTokenFilter;
-import com.felipesantos.provapa.security.jwt.JwtTokenProvider;
+import com.felipesantos.projetosecurity.security.jwt.JwtTokenFilter;
+import com.felipesantos.projetosecurity.security.jwt.JwtTokenProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -52,6 +52,7 @@ public class SecurityConfig {
         return http
                 .httpBasic(AbstractHttpConfigurer::disable)
                 .csrf(AbstractHttpConfigurer::disable)
+                .headers(headers -> headers.frameOptions(frameOptions -> frameOptions.sameOrigin()))
                 .addFilterBefore(filter, UsernamePasswordAuthenticationFilter.class)
                 .sessionManagement(
                         session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
@@ -59,12 +60,16 @@ public class SecurityConfig {
                 .authorizeHttpRequests(
                         authorizeHttpRequest -> authorizeHttpRequest
                                 .requestMatchers(
+                                        "/h2-console/**",
                                         "/auth/login",
                                         "/user/create"
                                 ).permitAll()
                                 .requestMatchers(
                                         "/user"
                                 ).hasRole("ADMIN")
+                                .requestMatchers(
+                                        "/user/**"
+                                ).hasAnyRole("ADMIN","USER")
                                 .anyRequest()
                                 .denyAll()
 

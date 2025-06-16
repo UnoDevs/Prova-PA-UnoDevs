@@ -1,4 +1,4 @@
-package com.felipesantos.provapa.model;
+package com.felipesantos.projetosecurity.model;
 
 import jakarta.persistence.*;
 import org.springframework.security.core.GrantedAuthority;
@@ -15,8 +15,10 @@ public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private String name;
     private String username;
     private String password;
+    @Enumerated(EnumType.STRING)
     private Role role;
 
     public User() {
@@ -24,8 +26,7 @@ public class User implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        if(this.role == Role.ADMIN) return List.of(new SimpleGrantedAuthority("ADMIN"), new SimpleGrantedAuthority("USER"));
-        else return List.of(new SimpleGrantedAuthority("USER"));
+        return List.of(new SimpleGrantedAuthority(role.getRole()));
     }
 
     public Long getId() {
@@ -60,5 +61,13 @@ public class User implements UserDetails {
 
     public void setRole(Role role) {
         this.role = role;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

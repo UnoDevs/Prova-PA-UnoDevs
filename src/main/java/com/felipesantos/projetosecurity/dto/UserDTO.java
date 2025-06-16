@@ -1,6 +1,7 @@
-package com.felipesantos.provapa.dto;
+package com.felipesantos.projetosecurity.dto;
 
-import com.felipesantos.provapa.model.Role;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.felipesantos.projetosecurity.model.Role;
 
 import java.io.Serializable;
 
@@ -8,7 +9,9 @@ public class UserDTO implements Serializable {
     private static final  long serialVersionUID = 1l;
 
     private Long id;
+    private String name;
     private String username;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private String password;
     private Role role;
 
@@ -45,5 +48,13 @@ public class UserDTO implements Serializable {
 
     public void setRole(Role role) {
         this.role = role;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
